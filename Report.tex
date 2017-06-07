@@ -1,0 +1,128 @@
+%%\PassOptionsToPackage{english}{babel}
+\documentclass[pfe ,titlesmallcaps]{isipfe}
+\usepackage[english]{babel}
+\addto\captionsenglish{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Table of contents}%
+}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{nth}
+\usepackage[light]{CormorantGaramond}
+\usepackage[T1]{fontenc}
+\usepackage{lettrine}
+\usepackage{kpfonts}
+%%\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\graphicspath{{./Figures/}}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{acro}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{enumitem}
+\usepackage{algorithmic}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{tcolorbox}
+\usepackage[]{multibib}
+\newcites{A}{Webography}
+\usepackage{notoccite}
+\usepackage{acronym}
+\usepackage{textcomp}
+%%\usepackage[frenchb]{babel}
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+\usepackage{inconsolata}
+\usepackage{color}
+
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+
+\lstset{language=Java,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%},
+  moredelim=[il][\textcolor{pgrey}]{\$\$}  
+}
+
+
+
+ 
+\begin{document}  
+
+\frontmatter
+
+\title{Titre du projet}
+\author{Safoine BENHMIDA}
+
+\input{page_garde}
+\input{dedicaces}
+\input{dedicaces2}
+\input{remerciement}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+\listoffigures
+\listoftables
+\lstlistoflistings
+\input{acronymes}
+
+\mainmatter
+%%%%% Introduction
+\input{chap_intro}
+
+%%%%% Chapter one
+\input{chap_01}
+
+%%%%% Chapter two
+\input{chap_02}
+
+%%%%% Chapter three
+\input{chap_03}
+
+\input{chap_4}
+
+%%%%% To add new chapter, you should first add a chap_xx.tex file to the folder and add the following line
+% \input{chap_xx}
+
+%%%%% Conclusion
+\input{chap_conclusion}
+
+%\appendix
+
+
+\backmatter
+
+
+%%%%% Bibliography, in BibTeX format (the references.bib file)
+\bibliographystyle{plain}
+\bibliography{references}
+
+%%\afterpage{\blankpage}
+
+%\bibliographystyleA{plain}
+%\bibliographyA{references}  
+
+\afterpage{\blankpage}
+
+\end{document}

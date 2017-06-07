@@ -1,0 +1,35 @@
+====================================================================
+ISI PFE reports LaTeX class file. 
+====================================================================
+
+This is a LaTeX class file (and associated style files provided with
+the package but falling under different copyright agreements) that
+can be used in the preparation of PFE at ISI, Tunis.
+
+The files are distributed as a simple .zip file.  Uncompress with
+your favorite decompression utitlity, and you will be presented with
+a "isipfe" directory.
+
+Within this directory you will find,
+
+ o Report.tex: the main TeX file 
+ o remerciement.tex, resume.tex: frontmatter files
+ o chap_intro.tex, chap_xx.tex, chap_conclusion.tex: sample chapter files
+ o references.bib: sample BibTeX file
+ o Figures: a folder where figures should be put
+
+Edit and add to these as you see fit, don't forget to include extra files in
+thesis.tex.
+isipfe.cls is the main class file that defines the look, and isipfe.bst
+defines the style of the bibliography (generated using the makebst), edit these
+to tweak the look. 
+
+isipfe depends on a number of standard packages: {ccaption, quotchap, makeidx, 
+natbib, tocbibind, amsmath,amsfonts,amssymb, graphicx, showkeys}, you may need
+to either install these packages or comment out the corresponding  \usepackage 
+command.
+
+Good luck.
+
+Mohamed Laaraiedh
+
